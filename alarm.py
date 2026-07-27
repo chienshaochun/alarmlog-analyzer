@@ -39,6 +39,32 @@ def count_alarms_by_severity(alarms):
     
     return count
 
+
+def count_alarms_by_hour(alarms):
+    count = {}
+
+    for alarm in alarms:
+        hour = get_hour(alarm["timestamp"])
+
+        if hour not in count:
+            count[hour] = 0
+        
+        count[hour] += 1
+
+    return count
+
+def find_busiest_hour(hour_count):
+    busiest_hour = None
+    busiest_count = 0
+
+    for hour, count in hour_count.items():
+        if count > busiest_count:
+            busiest_count = count
+            busiest_hour = hour
+
+    return busiest_hour, busiest_count
+
+
 def main():
     alarms = load_alarms(CSV_PATH)
 
@@ -54,13 +80,17 @@ def main():
     severity_count = count_alarms_by_severity(alarms)
     for severity, count in severity_count.items():
         print(f"- [{severity}]: {count} 筆")
+    
+    print("告警時間統計：")
+    hour_count = count_alarms_by_hour(alarms)
 
-    for alarm in alarms[:5]:
-        hour = get_hour(alarm["timestamp"])
-        print(f"{alarm['equipment']} {alarm['alarm_type']} {alarm['severity']} {hour}")
-
-        if alarm["severity"] == "critical":
-            print("這是危險告警！")
+    print("每小時告警統計")
+    for hour in sorted(hour_count):
+        count = hour_count[hour]
+        print(f"- [{hour}:00]: {count} 筆")
+    
+    busiest_hour,busiest_count = find_busiest_hour(hour_count)
+    print(f"告警最多的時段：{busiest_hour}:00，共 {busiest_count} 筆") 
 
 if __name__ == "__main__":
     main()
