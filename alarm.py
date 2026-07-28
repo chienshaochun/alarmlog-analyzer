@@ -1,4 +1,7 @@
 import csv
+from functools import total_ordering
+from logging import critical
+from nt import O_TRUNC
 
 # 資料檔與此程式放在同一資料夾，所以路徑直接用檔名即可
 CSV_PATH = "alarms.csv"
@@ -64,6 +67,20 @@ def find_busiest_hour(hour_count):
 
     return busiest_hour, busiest_count
 
+def filter_alarms_by_severity(alarms, target_severity):
+    filter_alarms = []
+
+    for alarm in alarms:
+        if alarm["severity"] == target_severity:
+            filter_alarms.append(alarm)
+
+    return filter_alarms
+
+def calculate_percentage(part, total):
+    if total == 0:
+        return 0.0
+
+    return part/total*100
 
 def main():
     alarms = load_alarms(CSV_PATH)
@@ -78,19 +95,33 @@ def main():
 
     print("告警嚴重程度統計：")
     severity_count = count_alarms_by_severity(alarms)
+    total_alarms = len(alarms)
+
     for severity, count in severity_count.items():
-        print(f"- [{severity}]: {count} 筆")
-    
-    print("告警時間統計：")
-    hour_count = count_alarms_by_hour(alarms)
+        percentage = calculate_percentage(count, total_alarms)
+        print(
+            f"- [{severity}]: {count} 筆"
+            f"({percentage:.2f}%)"
+        )
+
 
     print("每小時告警統計")
+    hour_count = count_alarms_by_hour(alarms)
     for hour in sorted(hour_count):
         count = hour_count[hour]
         print(f"- [{hour}:00]: {count} 筆")
-    
     busiest_hour,busiest_count = find_busiest_hour(hour_count)
     print(f"告警最多的時段：{busiest_hour}:00，共 {busiest_count} 筆") 
 
+
+    critical_alarms = filter_alarms_by_severity(alarms, "critical")
+    print(f"Critical 告警共有 {len(critical_alarms)} 筆")
+
+    for alarm in critical_alarms[:5]:
+        print(
+            alarm["timestamp"],
+            alarm["equipment"],
+            alarm["alarm_type"]
+        )
 if __name__ == "__main__":
     main()
