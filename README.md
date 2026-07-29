@@ -1,27 +1,49 @@
 # Alarm Log Analyzer
 
-這是一個使用 Python 撰寫的告警紀錄分析練習專案。程式會讀取 CSV 格式的設備告警資料，整理告警的嚴重程度與發生時段，協助快速了解一批告警紀錄的分布情況。
+這是一個用來練習 Python 基礎能力的命令列專案。程式會讀取 CSV 格式的設備告警資料，驗證資料內容，並整理告警的嚴重程度與發生時段。
 
-目前專案是以命令列執行的單一 Python 程式，不需要安裝第三方套件。
+這個專案有明確的學習終點。完成下方的「專案畢業目標」後就停止擴充，進入下一個 Python 專案。
 
 ## 目前功能
 
 執行程式後會：
 
-1. 從 `alarms.csv` 載入所有告警。
-2. 顯示告警總筆數、第一筆與最後一筆資料。
-3. 依嚴重程度統計筆數及百分比。
-4. 依小時統計告警筆數。
-5. 找出告警數量最多的時段。
-6. 篩選 `critical` 告警，並顯示前 5 筆的時間、設備與告警類型。
+1. 從預設或使用者指定的 CSV 載入告警。
+2. 驗證必要欄位、空值及時間格式。
+3. 顯示告警總筆數、第一筆與最後一筆資料。
+4. 依嚴重程度統計筆數及百分比。
+5. 依小時統計告警筆數。
+6. 找出告警數量最多的時段。
+7. 依數量由多到少顯示設備與告警類型統計。
+8. 找出告警最多的設備與最常發生的告警類型。
+9. 篩選 `critical` 告警，並顯示前 5 筆。
+10. 發生缺檔或資料格式錯誤時，顯示清楚訊息並回傳錯誤碼。
+
+## 專案畢業目標
+
+最終目標：使用純 Python 標準函式庫，完成一個可從命令列操作、能處理錯誤、可匯出分析結果，並具備自動化測試的告警分析工具。
+
+目前任務進度：3 / 7
+
+- [x] 讀取 UTF-8 CSV 告警資料
+- [x] 統計嚴重程度、百分比與每小時告警數
+- [x] 找出告警最多時段並篩選 `critical` 告警
+- [x] 從命令列指定 CSV 路徑
+- [x] 處理缺檔、必要欄位、空資料與時間格式錯誤
+- [x] 使用 `pathlib`、`argparse`、函式與例外處理
+- [x] 增加設備別與告警類型統計
+- [ ] 增加嚴重程度篩選與顯示筆數參數
+- [ ] 將分析結果匯出為 JSON 或 CSV
+- [ ] 使用 Python 內建 `unittest` 測試核心函式
+- [ ] 完成最終操作驗證，並能說明完整資料流程
 
 ## 專案結構
 
 ```text
 alarmlog_analyzer/
-├── alarm.py       # 載入、分析並輸出告警統計
+├── alarm.py       # 命令列入口、資料驗證與告警分析
 ├── alarms.csv     # 告警原始資料
-└── README.md      # 專案說明
+└── README.md      # 使用方式、資料格式與學習進度
 ```
 
 ## 執行環境
@@ -29,23 +51,33 @@ alarmlog_analyzer/
 - Python 3
 - 目前已使用 Python 3.12 驗證
 - 僅使用 Python 標準函式庫，不需要執行 `pip install`
-
-目前 `alarm.py` 內含 Windows 的 `nt` 模組匯入，因此建議先在 Windows 環境執行。該匯入目前沒有參與告警分析邏輯。
+- 可在 Windows、macOS 或 Linux 執行
 
 ## 快速開始
 
-在 PowerShell 進入專案目錄：
+在 PowerShell 進入專案目錄後，使用程式旁的預設 `alarms.csv`：
 
 ```powershell
-cd C:\Users\ru03g\side_project\alarmlog_analyzer
 python .\alarm.py
 ```
 
-程式目前使用相對路徑讀取 `alarms.csv`，因此執行時的工作目錄需要是專案根目錄。
+指定其他 CSV：
+
+```powershell
+python .\alarm.py .\other_alarms.csv
+```
+
+查看命令列說明：
+
+```powershell
+python .\alarm.py --help
+```
+
+預設 CSV 路徑是根據 `alarm.py` 的位置取得，因此從其他工作目錄啟動程式時也能找到內附資料。
 
 ## CSV 資料格式
 
-`alarms.csv` 必須包含以下欄位名稱：
+CSV 必須包含以下欄位名稱：
 
 | 欄位 | 說明 | 範例 |
 | --- | --- | --- |
@@ -62,7 +94,15 @@ timestamp,equipment,alarm_type,severity
 2026-07-20 08:31:39,Valve-02,Failed to Close,critical
 ```
 
-程式以 `utf-8-sig` 編碼讀取 CSV，因此可接受一般 UTF-8 CSV，也可正確處理由 Excel 等工具輸出的 UTF-8 BOM。
+程式以 `utf-8-sig` 編碼讀取 CSV，因此可接受一般 UTF-8 CSV，也可處理由 Excel 等工具輸出的 UTF-8 BOM。
+
+以下情況會停止分析並顯示錯誤：
+
+- 找不到或沒有權限讀取 CSV。
+- CSV 缺少標題列或必要欄位。
+- 必要欄位的值為空。
+- `timestamp` 不符合指定格式。
+- CSV 只有標題而沒有告警資料。
 
 ## 目前資料的分析結果
 
@@ -73,62 +113,56 @@ timestamp,equipment,alarm_type,severity
 - `critical`：131 筆（43.67%）
 - `info`：5 筆（1.67%）
 - 告警最多的時段：11:00，共 20 筆
+- 告警最多的設備：`Tank-01`，共 49 筆
+- 最常發生的告警類型：`Position Error`，共 32 筆
 
-部分輸出如下：
-
-```text
-總共讀到 300 筆告警
-告警嚴重程度統計：
-- [warning]: 164 筆(54.67%)
-- [critical]: 131 筆(43.67%)
-- [info]: 5 筆(1.67%)
-
-告警最多的時段：11:00，共 20 筆
-Critical 告警共有 131 筆
-```
-
-如果修改 `alarms.csv`，分析結果也會隨之改變。
+如果修改或指定其他 CSV，分析結果也會隨之改變。
 
 ## 程式處理流程
 
 ```text
-alarms.csv
+命令列參數
     ↓
-load_alarms()
+選擇 CSV 路徑
     ↓
-告警嚴重程度統計 ──→ 筆數與百分比
-每小時告警統計   ──→ 告警最多時段
-critical 篩選     ──→ 顯示前 5 筆
+load_alarms()：讀取並驗證資料
+    ↓
+print_report()
+    ├── 嚴重程度統計 ──→ 筆數與百分比
+    ├── 每小時統計   ──→ 告警最多時段
+    ├── 設備統計     ──→ 告警最多設備
+    ├── 告警類型統計 ──→ 最常見告警類型
+    └── critical 篩選 ──→ 顯示前 5 筆
 ```
 
-## 主要函式
+## 主要函式與類別
 
-| 函式 | 用途 |
+| 名稱 | 用途 |
 | --- | --- |
-| `load_alarms(csv_path)` | 讀取 CSV，將每一列轉成字典並組成清單 |
-| `get_hour(timestamp)` | 從時間字串取得小時，例如從 `08:11:14` 取得 `08` |
+| `AlarmDataError` | 表示 CSV 告警內容不符合格式 |
+| `load_alarms(csv_path)` | 讀取並驗證 CSV，回傳告警清單 |
+| `get_hour(timestamp)` | 解析時間並取得小時 |
+| `count_alarms_by_field(alarms, field_name)` | 依指定欄位進行通用筆數統計 |
 | `count_alarms_by_severity(alarms)` | 統計各嚴重程度的告警數量 |
+| `count_alarms_by_equipment(alarms)` | 統計各設備的告警數量 |
+| `count_alarms_by_alarm_type(alarms)` | 統計各告警類型的數量 |
 | `count_alarms_by_hour(alarms)` | 統計每個小時的告警數量 |
+| `sort_counts_descending(counts)` | 將統計結果依數量由多到少排列 |
+| `find_most_common(counts)` | 找出統計結果中數量最多的項目 |
 | `find_busiest_hour(hour_count)` | 找出告警最多的小時及筆數 |
 | `filter_alarms_by_severity(alarms, target_severity)` | 依指定嚴重程度篩選告警 |
 | `calculate_percentage(part, total)` | 計算百分比，總數為 0 時回傳 `0.0` |
-| `main()` | 串接資料載入、分析與命令列輸出 |
+| `print_report(alarms)` | 將分析結果顯示在終端機 |
+| `parse_args(argv)` | 定義並解析命令列參數 |
+| `main(argv)` | 串接參數、資料載入、錯誤處理與報表輸出 |
 
-## 目前限制與注意事項
+## 目前限制
 
-- CSV 檔名固定為 `alarms.csv`，目前不能從命令列指定其他檔案。
-- 欄位名稱必須與既定格式一致，程式目前沒有欄位驗證或錯誤提示。
-- `timestamp` 必須包含日期與時間，並以空格分隔；格式錯誤會造成解析失敗。
-- `severity` 比對會區分大小寫，例如 `critical` 與 `Critical` 會被視為不同值。
-- CSV 若只有標題而沒有資料，顯示第一筆與最後一筆資料時會發生錯誤。
-- 如果多個時段並列最高，目前會回傳分析過程中最先遇到的時段。
-- 分析結果只會顯示在終端機，尚未輸出成報表或圖表。
+- `severity` 比對會區分大小寫，例如 `critical` 與 `Critical` 是不同值。
+- 多個項目的數量相同時，會再依名稱排列；並列最多時會取名稱排序較前的項目。
+- 目前只顯示固定前 5 筆 `critical` 告警。
+- 分析結果目前只顯示在終端機，尚未匯出成檔案。
 
-## 後續可擴充方向
+## 不在本專案範圍
 
-- 支援從命令列指定 CSV 路徑與篩選條件。
-- 加入 CSV 欄位、時間格式與空資料檢查。
-- 增加設備別與告警類型統計。
-- 將結果匯出為新的 CSV、JSON 或 HTML 報表。
-- 加入趨勢圖與告警分布圖。
-- 補上自動化測試與跨平台支援。
+為了維持 Python 基礎練習的焦點，本專案不加入圖形介面、網頁介面、資料庫、登入系統或 AI 分析。
