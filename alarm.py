@@ -1,5 +1,6 @@
 import argparse
 import csv
+import json
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -162,6 +163,70 @@ def calculate_percentage(part, total):
     return part / total * 100
 
 
+def build_report_data(alarms, target_severity, top):
+    """整理完整統計與指定篩選結果，回傳可轉成 JSON 的 dict。"""
+    severity_counts = count_alarms_by_severity(alarms)
+    hour_counts = count_alarms_by_hour(alarms)
+    equipment_counts = count_alarms_by_equipment(alarms)
+    alarm_type_counts = count_alarms_by_alarm_type(alarms)
+
+    # JSON 與終端機使用相同的 severity 和 top 篩選條件。
+    matching_alarms = filter_alarms_by_severity(alarms, target_severity)
+    selected_alarms = matching_alarms[:top]
+
+    # 這三個函式都回傳 (名稱, 數量)，可用 tuple unpacking 拆開。
+    busiest_hour, busiest_hour_count = find_busiest_hour(hour_counts)
+    busiest_equipment, equipment_alarm_count = find_most_common(
+        equipment_counts
+    )
+    most_common_alarm_type, most_common_alarm_type_count = find_most_common(
+        alarm_type_counts
+    )
+
+    # dict 的 key 將成為 JSON 欄位名稱，value 也可以是另一個 dict。
+    report_data = {
+        "total_alarms": len(alarms),
+        "selected_alarms": {
+            "severity": target_severity,
+            "total_matches": len(matching_alarms),
+            "limit": top,
+            "returned": len(selected_alarms),
+            "alarms": selected_alarms,
+        },
+        "severity_counts": severity_counts,
+        "hour_counts": hour_counts,
+        "busiest_hour": {
+            "hour": busiest_hour,
+            "count": busiest_hour_count,
+        },
+        "equipment_counts": equipment_counts,
+        "busiest_equipment": {
+            "equipment": busiest_equipment,
+            "count": equipment_alarm_count,
+        },
+        "alarm_type_counts": alarm_type_counts,
+        "most_common_alarm_type": {
+            "alarm_type": most_common_alarm_type,
+            "count": most_common_alarm_type_count,
+        },
+    }
+
+    return report_data
+
+
+def save_report_json(report_data, output_path):
+    """將報表 dict 寫成 UTF-8 JSON 檔案。"""
+    with Path(output_path).open("w", encoding="utf-8") as file:
+        json.dump(
+            report_data,
+            file,
+            ensure_ascii=False,
+            indent=2,
+        )
+        # 在檔案末尾補換行，讓文字編輯器與版本控制顯示更整齊。
+        file.write("\n")
+
+
 def print_report(alarms, target_severity, top):
     """顯示完整統計，並列出指定嚴重程度的前 top 筆告警。"""
     print(f"總共讀到 {len(alarms)} 筆告警")
@@ -244,6 +309,12 @@ def parse_args(argv=None):
         default=5,
         help="詳細告警的顯示筆數（預設：5）",
     )
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=Path("report.json"),
+        help="JSON 報表的輸出路徑（預設:report.json）",
+    )
 
     args = parser.parse_args(argv)
     # int 會拒絕非整數；這裡再拒絕會造成反向切片的負數。
@@ -273,6 +344,18 @@ def main(argv=None):
 
     # 將 parse_args() 解析出的 severity 與 top 傳入報表函式。
     print_report(alarms, args.severity, args.top)
+
+    # args.output 未指定時也是 Path("report.json")，因此每次都會輸出報表。
+    report_data = build_report_data(alarms, args.severity, args.top)
+
+    try:
+        save_report_json(report_data, args.output)
+    except OSError as error:
+        print(f"錯誤：無法寫入 JSON 報表：{error}", file=sys.stderr)
+        return 1
+
+    print(f"JSON 報表已輸出：{args.output}")
+
     return 0
 
 

@@ -1,0 +1,115 @@
+{
+  "total_alarms": 300,
+  "selected_alarms": {
+    "severity": "info",
+    "total_matches": 5,
+    "limit": 10,
+    "returned": 5,
+    "alarms": [
+      {
+        "timestamp": "2026-07-20 20:51:54",
+        "equipment": "Sensor-01",
+        "alarm_type": "Calibration Required",
+        "severity": "info"
+      },
+      {
+        "timestamp": "2026-07-21 01:53:01",
+        "equipment": "Sensor-01",
+        "alarm_type": "Calibration Required",
+        "severity": "info"
+      },
+      {
+        "timestamp": "2026-07-21 03:13:45",
+        "equipment": "Sensor-01",
+        "alarm_type": "Calibration Required",
+        "severity": "info"
+      },
+      {
+        "timestamp": "2026-07-21 19:14:05",
+        "equipment": "Sensor-01",
+        "alarm_type": "Calibration Required",
+        "severity": "info"
+      },
+      {
+        "timestamp": "2026-07-21 23:42:14",
+        "equipment": "Sensor-01",
+        "alarm_type": "Calibration Required",
+        "severity": "info"
+      }
+    ]
+  },
+  "severity_counts": {
+    "warning": 164,
+    "critical": 131,
+    "info": 5
+  },
+  "hour_counts": {
+    "08": 15,
+    "09": 15,
+    "10": 15,
+    "11": 20,
+    "12": 13,
+    "13": 12,
+    "14": 15,
+    "15": 11,
+    "16": 17,
+    "17": 14,
+    "18": 12,
+    "19": 14,
+    "20": 13,
+    "21": 11,
+    "22": 17,
+    "23": 14,
+    "00": 15,
+    "01": 12,
+    "02": 12,
+    "03": 7,
+    "04": 5,
+    "05": 8,
+    "06": 7,
+    "07": 6
+  },
+  "busiest_hour": {
+    "hour": "11",
+    "count": 20
+  },
+  "equipment_counts": {
+    "Pump-02": 36,
+    "Valve-02": 42,
+    "Sensor-01": 36,
+    "Pump-01": 34,
+    "Tank-01": 49,
+    "Tank-02": 38,
+    "PLC-01": 29,
+    "Valve-01": 36
+  },
+  "busiest_equipment": {
+    "equipment": "Tank-01",
+    "count": 49
+  },
+  "alarm_type_counts": {
+    "Pressure High": 21,
+    "Position Error": 32,
+    "Failed to Close": 17,
+    "Signal Unstable": 17,
+    "Pressure Low": 9,
+    "Level High": 30,
+    "Level Low-Low": 8,
+    "Backup Battery Low": 4,
+    "Level High-High": 19,
+    "Out of Range": 14,
+    "Flow Low": 8,
+    "Connection Lost": 24,
+    "Level Low": 30,
+    "Communication Timeout": 12,
+    "Pump Trip": 15,
+    "Motor Overheat": 17,
+    "Failed to Open": 5,
+    "CPU Load High": 13,
+    "Calibration Required": 5
+  },
+  "most_common_alarm_type": {
+    "alarm_type": "Position Error",
+    "count": 32
+  }
+}

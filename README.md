@@ -17,13 +17,14 @@
 7. 依數量由多到少顯示設備與告警類型統計。
 8. 找出告警最多的設備與最常發生的告警類型。
 9. 依命令列指定的嚴重程度篩選告警，並控制詳細資料顯示筆數。
-10. 發生缺檔或資料格式錯誤時，顯示清楚訊息並回傳錯誤碼。
+10. 將完整統計、最高項目及篩選詳細資料輸出成 JSON。
+11. 發生缺檔或資料格式錯誤時，顯示清楚訊息並回傳錯誤碼。
 
 ## 專案畢業目標
 
 最終目標：使用純 Python 標準函式庫，完成一個可從命令列操作、能處理錯誤、可匯出分析結果，並具備自動化測試的告警分析工具。
 
-目前任務進度：4 / 7
+目前任務進度：5 / 7
 
 - [x] 讀取 UTF-8 CSV 告警資料
 - [x] 統計嚴重程度、百分比與每小時告警數
@@ -33,7 +34,7 @@
 - [x] 使用 `pathlib`、`argparse`、函式與例外處理
 - [x] 增加設備別與告警類型統計
 - [x] 增加嚴重程度篩選與顯示筆數參數
-- [ ] 將分析結果匯出為 JSON 或 CSV
+- [x] 將分析結果匯出為 JSON
 - [ ] 使用 Python 內建 `unittest` 測試核心函式
 - [ ] 完成最終操作驗證，並能說明完整資料流程
 
@@ -43,6 +44,7 @@
 alarmlog_analyzer/
 ├── alarm.py       # 命令列入口、資料驗證與告警分析
 ├── alarms.csv     # 告警原始資料
+├── report.json    # 執行程式時建立或覆蓋的 JSON 報表
 └── README.md      # 使用方式、資料格式與學習進度
 ```
 
@@ -61,6 +63,8 @@ alarmlog_analyzer/
 python .\alarm.py
 ```
 
+這會在目前 PowerShell 資料夾建立或覆蓋預設的 `report.json`。
+
 指定其他 CSV：
 
 ```powershell
@@ -75,13 +79,30 @@ python .\alarm.py .\alarms.csv --severity warning --top 10
 
 `--severity` 可使用 `critical`、`warning` 或 `info`；`--top` 必須是 0 或正整數，預設為 5。
 
+指定其他 JSON 輸出路徑：
+
+```powershell
+python .\alarm.py --output .\other_report.json
+```
+
 查看命令列說明：
 
 ```powershell
 python .\alarm.py --help
 ```
 
-預設 CSV 路徑是根據 `alarm.py` 的位置取得，因此從其他工作目錄啟動程式時也能找到內附資料。
+預設 CSV 路徑是根據 `alarm.py` 的位置取得，因此從其他工作目錄啟動程式時也能找到內附資料。JSON 輸出路徑則以目前命令列所在資料夾為基準。
+
+## JSON 報表
+
+每次執行都會以寫入模式建立或覆蓋 JSON。報表包含：
+
+- 告警總數及嚴重程度、時段、設備、告警類型統計。
+- 告警最多時段、設備與最常見告警類型。
+- `--severity` 指定的條件及符合總數。
+- `--top` 指定的限制、實際回傳數量及詳細告警。
+
+預設輸出為 `report.json`；使用 `--output` 可以改成其他路徑。
 
 ## CSV 資料格式
 
@@ -134,13 +155,12 @@ timestamp,equipment,alarm_type,severity
 選擇 CSV 路徑
     ↓
 load_alarms()：讀取並驗證資料
-    ↓
-print_report()
-    ├── 嚴重程度統計 ──→ 筆數與百分比
-    ├── 每小時統計   ──→ 告警最多時段
-    ├── 設備統計     ──→ 告警最多設備
-    ├── 告警類型統計 ──→ 最常見告警類型
-    └── severity 篩選 ──→ 顯示前 top 筆
+    ├──→ print_report()
+    │       ├── 嚴重程度、時段、設備及告警類型統計
+    │       └── severity 篩選 ──→ 顯示前 top 筆
+    └──→ build_report_data()
+            ↓
+         save_report_json() ──→ report.json
 ```
 
 ## 主要函式與類別
@@ -160,6 +180,8 @@ print_report()
 | `find_busiest_hour(hour_count)` | 找出告警最多的小時及筆數 |
 | `filter_alarms_by_severity(alarms, target_severity)` | 依指定嚴重程度篩選告警 |
 | `calculate_percentage(part, total)` | 計算百分比，總數為 0 時回傳 `0.0` |
+| `build_report_data(alarms, target_severity, top)` | 建立包含完整統計與篩選資料的報表 dict |
+| `save_report_json(report_data, output_path)` | 將報表 dict 寫成 UTF-8 JSON 檔案 |
 | `print_report(alarms, target_severity, top)` | 顯示統計及指定嚴重程度的前 `top` 筆告警 |
 | `parse_args(argv)` | 定義並解析命令列參數 |
 | `main(argv)` | 串接參數、資料載入、錯誤處理與報表輸出 |
@@ -168,7 +190,6 @@ print_report()
 
 - `severity` 比對會區分大小寫，例如 `critical` 與 `Critical` 是不同值。
 - 多個項目的數量相同時，會再依名稱排列；並列最多時會取名稱排序較前的項目。
-- 分析結果目前只顯示在終端機，尚未匯出成檔案。
 
 ## 不在本專案範圍
 
