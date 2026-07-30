@@ -16,14 +16,14 @@
 6. 找出告警數量最多的時段。
 7. 依數量由多到少顯示設備與告警類型統計。
 8. 找出告警最多的設備與最常發生的告警類型。
-9. 篩選 `critical` 告警，並顯示前 5 筆。
+9. 依命令列指定的嚴重程度篩選告警，並控制詳細資料顯示筆數。
 10. 發生缺檔或資料格式錯誤時，顯示清楚訊息並回傳錯誤碼。
 
 ## 專案畢業目標
 
 最終目標：使用純 Python 標準函式庫，完成一個可從命令列操作、能處理錯誤、可匯出分析結果，並具備自動化測試的告警分析工具。
 
-目前任務進度：3 / 7
+目前任務進度：4 / 7
 
 - [x] 讀取 UTF-8 CSV 告警資料
 - [x] 統計嚴重程度、百分比與每小時告警數
@@ -32,7 +32,7 @@
 - [x] 處理缺檔、必要欄位、空資料與時間格式錯誤
 - [x] 使用 `pathlib`、`argparse`、函式與例外處理
 - [x] 增加設備別與告警類型統計
-- [ ] 增加嚴重程度篩選與顯示筆數參數
+- [x] 增加嚴重程度篩選與顯示筆數參數
 - [ ] 將分析結果匯出為 JSON 或 CSV
 - [ ] 使用 Python 內建 `unittest` 測試核心函式
 - [ ] 完成最終操作驗證，並能說明完整資料流程
@@ -66,6 +66,14 @@ python .\alarm.py
 ```powershell
 python .\alarm.py .\other_alarms.csv
 ```
+
+篩選嚴重程度並控制詳細資料筆數：
+
+```powershell
+python .\alarm.py .\alarms.csv --severity warning --top 10
+```
+
+`--severity` 可使用 `critical`、`warning` 或 `info`；`--top` 必須是 0 或正整數，預設為 5。
 
 查看命令列說明：
 
@@ -132,7 +140,7 @@ print_report()
     ├── 每小時統計   ──→ 告警最多時段
     ├── 設備統計     ──→ 告警最多設備
     ├── 告警類型統計 ──→ 最常見告警類型
-    └── critical 篩選 ──→ 顯示前 5 筆
+    └── severity 篩選 ──→ 顯示前 top 筆
 ```
 
 ## 主要函式與類別
@@ -152,7 +160,7 @@ print_report()
 | `find_busiest_hour(hour_count)` | 找出告警最多的小時及筆數 |
 | `filter_alarms_by_severity(alarms, target_severity)` | 依指定嚴重程度篩選告警 |
 | `calculate_percentage(part, total)` | 計算百分比，總數為 0 時回傳 `0.0` |
-| `print_report(alarms)` | 將分析結果顯示在終端機 |
+| `print_report(alarms, target_severity, top)` | 顯示統計及指定嚴重程度的前 `top` 筆告警 |
 | `parse_args(argv)` | 定義並解析命令列參數 |
 | `main(argv)` | 串接參數、資料載入、錯誤處理與報表輸出 |
 
@@ -160,7 +168,6 @@ print_report()
 
 - `severity` 比對會區分大小寫，例如 `critical` 與 `Critical` 是不同值。
 - 多個項目的數量相同時，會再依名稱排列；並列最多時會取名稱排序較前的項目。
-- 目前只顯示固定前 5 筆 `critical` 告警。
 - 分析結果目前只顯示在終端機，尚未匯出成檔案。
 
 ## 不在本專案範圍
