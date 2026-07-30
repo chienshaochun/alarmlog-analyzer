@@ -24,7 +24,7 @@
 
 最終目標：使用純 Python 標準函式庫，完成一個可從命令列操作、能處理錯誤、可匯出分析結果，並具備自動化測試的告警分析工具。
 
-目前任務進度：5 / 7
+目前任務進度：6 / 7
 
 - [x] 讀取 UTF-8 CSV 告警資料
 - [x] 統計嚴重程度、百分比與每小時告警數
@@ -35,7 +35,7 @@
 - [x] 增加設備別與告警類型統計
 - [x] 增加嚴重程度篩選與顯示筆數參數
 - [x] 將分析結果匯出為 JSON
-- [ ] 使用 Python 內建 `unittest` 測試核心函式
+- [x] 使用 Python 內建 `unittest` 測試核心函式
 - [ ] 完成最終操作驗證，並能說明完整資料流程
 
 ## 專案結構
@@ -44,6 +44,7 @@
 alarmlog_analyzer/
 ├── alarm.py       # 命令列入口、資料驗證與告警分析
 ├── alarms.csv     # 告警原始資料
+├── test_alarm.py  # 核心函式與整合流程的自動化測試
 ├── report.json    # 執行程式時建立或覆蓋的 JSON 報表
 └── README.md      # 使用方式、資料格式與學習進度
 ```
@@ -55,6 +56,15 @@ alarmlog_analyzer/
 - 僅使用 Python 標準函式庫，不需要執行 `pip install`
 - 可在 Windows、macOS 或 Linux 執行
 
+## 執行自動化測試
+
+在專案目錄執行：
+
+```powershell
+python -m unittest -v
+```
+
+目前共有 27 個測試，涵蓋統計與排序、時間與篩選、CSV 驗證、JSON 輸出、命令列參數，以及 `main()` 的完整串接流程。測試使用暫存資料夾建立輸入與輸出檔案，不會改動正式的 `alarms.csv` 或 `report.json`。
 ## 快速開始
 
 在 PowerShell 進入專案目錄後，使用程式旁的預設 `alarms.csv`：
@@ -146,6 +156,34 @@ timestamp,equipment,alarm_type,severity
 - 最常發生的告警類型：`Position Error`，共 32 筆
 
 如果修改或指定其他 CSV，分析結果也會隨之改變。
+
+## 函式依賴關係
+
+下圖由呼叫者往它使用的函式展開；標示「共用」的函式會同時被終端機報表與 JSON 報表使用。
+
+```text
+main()
+├── parse_args()                         # 解析 CSV、severity、top、output
+├── load_alarms()                        # 讀取並驗證 CSV
+├── print_report()
+│   ├── calculate_percentage()
+│   ├── count_alarms_by_severity() ──┐
+│   ├── count_alarms_by_equipment()  ├──→ count_alarms_by_field() [共用]
+│   ├── count_alarms_by_alarm_type() ┘
+│   ├── count_alarms_by_hour() ─────────→ get_hour() [共用]
+│   ├── find_busiest_hour() ──┐
+│   │                         └──→ find_most_common()
+│   │                                  └──→ sort_counts_descending() [共用]
+│   ├── sort_counts_descending()
+│   └── filter_alarms_by_severity() [共用]
+└── build_report_data()
+    ├── 各種 count_alarms_by_*() 共用統計函式
+    ├── find_busiest_hour() / find_most_common()
+    ├── filter_alarms_by_severity()
+    └── 產生 report_data ──→ save_report_json() ──→ report.json
+```
+
+自動化測試也依照這張圖由底層往上進行：先測沒有外部依賴的計算與排序函式，再測資料讀寫，最後才測 `main()` 的完整整合流程。
 
 ## 程式處理流程
 
