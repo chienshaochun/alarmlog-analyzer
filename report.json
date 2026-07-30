@@ -1,40 +1,40 @@
 {
   "total_alarms": 300,
   "selected_alarms": {
-    "severity": "info",
-    "total_matches": 5,
-    "limit": 10,
+    "severity": "critical",
+    "total_matches": 131,
+    "limit": 5,
     "returned": 5,
     "alarms": [
       {
-        "timestamp": "2026-07-20 20:51:54",
-        "equipment": "Sensor-01",
-        "alarm_type": "Calibration Required",
-        "severity": "info"
+        "timestamp": "2026-07-20 08:31:39",
+        "equipment": "Valve-02",
+        "alarm_type": "Failed to Close",
+        "severity": "critical"
       },
       {
-        "timestamp": "2026-07-21 01:53:01",
-        "equipment": "Sensor-01",
-        "alarm_type": "Calibration Required",
-        "severity": "info"
+        "timestamp": "2026-07-20 08:41:33",
+        "equipment": "Valve-02",
+        "alarm_type": "Failed to Close",
+        "severity": "critical"
       },
       {
-        "timestamp": "2026-07-21 03:13:45",
-        "equipment": "Sensor-01",
-        "alarm_type": "Calibration Required",
-        "severity": "info"
+        "timestamp": "2026-07-20 09:22:11",
+        "equipment": "Tank-02",
+        "alarm_type": "Level Low-Low",
+        "severity": "critical"
       },
       {
-        "timestamp": "2026-07-21 19:14:05",
-        "equipment": "Sensor-01",
-        "alarm_type": "Calibration Required",
-        "severity": "info"
+        "timestamp": "2026-07-20 09:24:55",
+        "equipment": "Tank-01",
+        "alarm_type": "Level High-High",
+        "severity": "critical"
       },
       {
-        "timestamp": "2026-07-21 23:42:14",
+        "timestamp": "2026-07-20 09:46:59",
         "equipment": "Sensor-01",
-        "alarm_type": "Calibration Required",
-        "severity": "info"
+        "alarm_type": "Out of Range",
+        "severity": "critical"
       }
     ]
   },

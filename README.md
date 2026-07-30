@@ -24,7 +24,7 @@
 
 最終目標：使用純 Python 標準函式庫，完成一個可從命令列操作、能處理錯誤、可匯出分析結果，並具備自動化測試的告警分析工具。
 
-目前任務進度：6 / 7
+目前任務進度：7 / 7
 
 - [x] 讀取 UTF-8 CSV 告警資料
 - [x] 統計嚴重程度、百分比與每小時告警數
@@ -36,7 +36,17 @@
 - [x] 增加嚴重程度篩選與顯示筆數參數
 - [x] 將分析結果匯出為 JSON
 - [x] 使用 Python 內建 `unittest` 測試核心函式
-- [ ] 完成最終操作驗證，並能說明完整資料流程
+- [x] 完成最終操作驗證，並能說明完整資料流程
+
+### 專案完成驗證
+
+專案已於 2026-07-30 完成畢業目標，停止新增功能並準備進入下一個 Python 專案。
+
+- 27 個 `unittest` 測試全數通過。
+- 預設參數及自訂 `severity`、`top`、`output` 均可正常執行，成功時結束碼為 `0`。
+- 終端機與 JSON 的總數、分類統計、最高項目及篩選詳細資料一致。
+- 缺檔與錯誤 CSV 會回傳 `1`；不合法命令列參數會由 `argparse` 回傳 `2`。
+- 錯誤流程不會建立 JSON 報表。
 
 ## 專案結構
 
@@ -65,6 +75,7 @@ python -m unittest -v
 ```
 
 目前共有 27 個測試，涵蓋統計與排序、時間與篩選、CSV 驗證、JSON 輸出、命令列參數，以及 `main()` 的完整串接流程。測試使用暫存資料夾建立輸入與輸出檔案，不會改動正式的 `alarms.csv` 或 `report.json`。
+
 ## 快速開始
 
 在 PowerShell 進入專案目錄後，使用程式旁的預設 `alarms.csv`：
@@ -188,17 +199,27 @@ main()
 ## 程式處理流程
 
 ```text
-命令列參數
+python alarm.py [csv_path] [--severity ...] [--top ...] [--output ...]
     ↓
-選擇 CSV 路徑
+main()
     ↓
-load_alarms()：讀取並驗證資料
-    ├──→ print_report()
-    │       ├── 嚴重程度、時段、設備及告警類型統計
-    │       └── severity 篩選 ──→ 顯示前 top 筆
-    └──→ build_report_data()
+parse_args()：解析並驗證命令列參數
+    ├── 參數錯誤 ──→ argparse 顯示錯誤 ──→ 結束碼 2
+    └── 產生 args
             ↓
-         save_report_json() ──→ report.json
+load_alarms(args.csv_path)：讀取並驗證 CSV
+    ├── 檔案或資料錯誤 ──→ main() 顯示錯誤 ──→ 結束碼 1
+    └── 產生 alarms 告警清單
+            ├──→ print_report(alarms, severity, top)
+            │       ├── 統計嚴重程度、時段、設備與告警類型
+            │       └── 篩選 severity ──→ 顯示前 top 筆
+            └──→ build_report_data(alarms, severity, top)
+                        ↓
+                 產生 report_data dict
+                        ↓
+                 save_report_json(report_data, output)
+                        ├── 寫入失敗 ──→ main() 顯示錯誤 ──→ 結束碼 1
+                        └── 寫入成功 ──→ JSON 報表 ──→ 結束碼 0
 ```
 
 ## 主要函式與類別
