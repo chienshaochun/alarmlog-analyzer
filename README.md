@@ -1,5 +1,18 @@
 # Alarm Log Analyzer
 
+## 第二階段：Alarm Log Incident Analyzer Skill
+
+本 Repository 現在也包含可自動探索的 [`alarm-log-analyzer`](.agents/skills/alarm-log-analyzer/SKILL.md) Skill。它延伸原本的 Alarm 統計程式，加入逐列格式驗證、資料清理、正規化後去重、Incident 分組，以及結構化 JSON 事件報告。
+
+預設以「同一設備前後兩筆 Alarm 相差不超過 15 分鐘」作為 Incident 分組規則。這是時間相關性分組，不代表 Alarm 之間已確認有因果關係。
+
+```powershell
+python .\.agents\skills\alarm-log-analyzer\scripts\analyze_alarm_log.py .\alarms.csv --output .\incident_report.json
+```
+
+可用 `--incident-window-minutes` 調整時間窗；若任何無效列或重複列都必須造成非零結束狀態，可加上 `--strict`。完整輸入與輸出契約位於 [`data-contract.md`](.agents/skills/alarm-log-analyzer/references/data-contract.md)。
+
+
 這是一個用來練習 Python 基礎能力的命令列專案。程式會讀取 CSV 格式的設備告警資料，驗證資料內容，並整理告警的嚴重程度與發生時段。
 
 這個專案有明確的學習終點。完成下方的「專案畢業目標」後就停止擴充，進入下一個 Python 專案。
@@ -40,9 +53,9 @@
 
 ### 專案完成驗證
 
-專案已於 2026-07-30 完成畢業目標，停止新增功能並準備進入下一個 Python 專案。
+第一階段已於 2026-07-30 完成原始 Alarm 統計目標；第二階段在相同 Repository 內加入可自動探索的 Incident Analyzer Skill。
 
-- 27 個 `unittest` 測試全數通過。
+- 第一階段 27 個測試與第二階段 9 個測試，共 36 個 `unittest` 測試全數通過。
 - 預設參數及自訂 `severity`、`top`、`output` 均可正常執行，成功時結束碼為 `0`。
 - 終端機與 JSON 的總數、分類統計、最高項目及篩選詳細資料一致。
 - 缺檔與錯誤 CSV 會回傳 `1`；不合法命令列參數會由 `argparse` 回傳 `2`。
@@ -51,12 +64,20 @@
 ## 專案結構
 
 ```text
-alarmlog_analyzer/
-├── alarm.py       # 命令列入口、資料驗證與告警分析
-├── alarms.csv     # 告警原始資料
-├── test_alarm.py  # 核心函式與整合流程的自動化測試
-├── report.json    # 執行程式時建立或覆蓋的 JSON 報表
-└── README.md      # 使用方式、資料格式與學習進度
+alarm-log-analyzer/
+├── .agents/
+│   └── skills/
+│       └── alarm-log-analyzer/
+│           ├── SKILL.md
+│           ├── agents/openai.yaml
+│           ├── references/data-contract.md
+│           └── scripts/analyze_alarm_log.py
+├── alarm.py                    # 第一階段命令列入口與告警統計
+├── alarms.csv                  # 告警原始資料
+├── test_alarm.py               # 第一階段測試
+├── test_incident_analyzer.py   # Skill 分析腳本與 Incident 測試
+├── report.json                 # 第一階段產生的 JSON 報表
+└── README.md                   # 使用方式、資料格式與學習進度
 ```
 
 ## 執行環境
@@ -74,7 +95,7 @@ alarmlog_analyzer/
 python -m unittest -v
 ```
 
-目前共有 27 個測試，涵蓋統計與排序、時間與篩選、CSV 驗證、JSON 輸出、命令列參數，以及 `main()` 的完整串接流程。測試使用暫存資料夾建立輸入與輸出檔案，不會改動正式的 `alarms.csv` 或 `report.json`。
+目前共有 36 個測試，涵蓋統計與排序、時間與篩選、CSV 驗證、資料清理、去重、Incident 分組、JSON 輸出、命令列參數，以及完整串接流程。測試使用暫存資料夾建立輸入與輸出檔案，不會改動正式的 `alarms.csv` 或 `report.json`。
 
 ## 快速開始
 

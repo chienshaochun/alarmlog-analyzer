@@ -1,0 +1,4 @@
+interface:
+  display_name: "Alarm Log Analyzer"
+  short_description: "Validate alarm logs and build incident reports"
+  default_prompt: "Use $alarm-log-analyzer to validate this industrial alarm log, group related alarms into incidents, and produce a structured report."
