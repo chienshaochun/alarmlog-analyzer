@@ -1,0 +1,5360 @@
+{
+  "report_metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-08-03T00:43:16Z",
+    "source_file": "alarms.csv",
+    "incident_window_minutes": 15
+  },
+  "data_quality": {
+    "input_rows": 300,
+    "valid_rows": 300,
+    "invalid_rows": 0,
+    "duplicate_rows_removed": 0,
+    "normalized_values": 0,
+    "issue_count": 0
+  },
+  "summary": {
+    "total_alarms": 300,
+    "total_incidents": 249,
+    "affected_equipment": 8,
+    "alarm_severity_counts": {
+      "critical": 131,
+      "info": 5,
+      "warning": 164
+    },
+    "incident_severity_counts": {
+      "critical": 121,
+      "info": 4,
+      "warning": 124
+    },
+    "equipment_alarm_counts": {
+      "PLC-01": 29,
+      "Pump-01": 34,
+      "Pump-02": 36,
+      "Sensor-01": 36,
+      "Tank-01": 49,
+      "Tank-02": 38,
+      "Valve-01": 36,
+      "Valve-02": 42
+    }
+  },
+  "incidents": [
+    {
+      "incident_id": "INC-20260720-0001",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-20 08:11:14",
+      "end_time": "2026-07-20 08:11:14",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 08:11:14",
+          "equipment": "Pump-02",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0002",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-20 08:15:44",
+      "end_time": "2026-07-20 08:15:44",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 08:15:44",
+          "equipment": "Valve-02",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0003",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-20 08:27:36",
+      "end_time": "2026-07-20 08:27:36",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 08:27:36",
+          "equipment": "Pump-02",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0004",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-20 08:31:39",
+      "end_time": "2026-07-20 08:41:33",
+      "duration_seconds": 594,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Close"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 08:31:39",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-20 08:41:33",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0005",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-20 08:51:11",
+      "end_time": "2026-07-20 08:51:11",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 08:51:11",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0006",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-20 08:56:15",
+      "end_time": "2026-07-20 08:56:15",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 08:56:15",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0007",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-20 09:02:23",
+      "end_time": "2026-07-20 09:02:23",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 09:02:23",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0008",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-20 09:15:44",
+      "end_time": "2026-07-20 09:22:11",
+      "duration_seconds": 387,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High",
+        "Level Low-Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 09:15:44",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 09:22:11",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low-Low",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0009",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-20 09:23:15",
+      "end_time": "2026-07-20 09:23:15",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Backup Battery Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 09:23:15",
+          "equipment": "PLC-01",
+          "alarm_type": "Backup Battery Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0010",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-20 09:24:55",
+      "end_time": "2026-07-20 09:24:55",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 09:24:55",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0011",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-20 09:31:25",
+      "end_time": "2026-07-20 09:31:25",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 09:31:25",
+          "equipment": "Valve-02",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0012",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-20 09:44:56",
+      "end_time": "2026-07-20 09:44:56",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 09:44:56",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0013",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-20 09:46:59",
+      "end_time": "2026-07-20 09:46:59",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Out of Range"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 09:46:59",
+          "equipment": "Sensor-01",
+          "alarm_type": "Out of Range",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0014",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-20 10:01:33",
+      "end_time": "2026-07-20 10:01:33",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 10:01:33",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0015",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-20 10:05:27",
+      "end_time": "2026-07-20 10:05:27",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 10:05:27",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0016",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-20 10:16:50",
+      "end_time": "2026-07-20 10:16:50",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Flow Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 10:16:50",
+          "equipment": "Pump-02",
+          "alarm_type": "Flow Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0017",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-20 10:21:20",
+      "end_time": "2026-07-20 10:21:20",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 10:21:20",
+          "equipment": "Valve-01",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0018",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-20 10:32:35",
+      "end_time": "2026-07-20 10:32:35",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Close"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 10:32:35",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0019",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-20 10:46:01",
+      "end_time": "2026-07-20 10:46:01",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 10:46:01",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0020",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-20 11:00:05",
+      "end_time": "2026-07-20 11:04:01",
+      "duration_seconds": 236,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High",
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 11:00:05",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 11:04:01",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0021",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-20 11:11:06",
+      "end_time": "2026-07-20 11:11:06",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Communication Timeout"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 11:11:06",
+          "equipment": "PLC-01",
+          "alarm_type": "Communication Timeout",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0022",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-20 11:15:38",
+      "end_time": "2026-07-20 11:15:38",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 11:15:38",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0023",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-20 11:25:55",
+      "end_time": "2026-07-20 11:25:55",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Out of Range"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 11:25:55",
+          "equipment": "Sensor-01",
+          "alarm_type": "Out of Range",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0024",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-20 11:28:36",
+      "end_time": "2026-07-20 11:28:36",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Communication Timeout"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 11:28:36",
+          "equipment": "PLC-01",
+          "alarm_type": "Communication Timeout",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0025",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-20 11:30:48",
+      "end_time": "2026-07-20 11:30:48",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 11:30:48",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0026",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-20 11:41:18",
+      "end_time": "2026-07-20 11:56:16",
+      "duration_seconds": 898,
+      "alarm_count": 3,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Motor Overheat",
+        "Pump Trip"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 11:41:18",
+          "equipment": "Pump-02",
+          "alarm_type": "Pump Trip",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-20 11:50:08",
+          "equipment": "Pump-02",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-20 11:56:16",
+          "equipment": "Pump-02",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0027",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-20 11:49:37",
+      "end_time": "2026-07-20 11:49:37",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 11:49:37",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0028",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-20 12:04:20",
+      "end_time": "2026-07-20 12:04:20",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Motor Overheat"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 12:04:20",
+          "equipment": "Pump-01",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0029",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-20 12:17:40",
+      "end_time": "2026-07-20 12:32:23",
+      "duration_seconds": 883,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost",
+        "Failed to Open"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 12:17:40",
+          "equipment": "Valve-01",
+          "alarm_type": "Failed to Open",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-20 12:32:23",
+          "equipment": "Valve-01",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0030",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-20 12:28:40",
+      "end_time": "2026-07-20 12:28:40",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 12:28:40",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0031",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-20 12:41:55",
+      "end_time": "2026-07-20 12:41:55",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Motor Overheat"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 12:41:55",
+          "equipment": "Pump-01",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0032",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-20 12:44:09",
+      "end_time": "2026-07-20 12:44:09",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 12:44:09",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0033",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-20 12:48:35",
+      "end_time": "2026-07-20 13:02:50",
+      "duration_seconds": 855,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Flow Low",
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 12:48:35",
+          "equipment": "Pump-02",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 13:02:50",
+          "equipment": "Pump-02",
+          "alarm_type": "Flow Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0034",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-20 13:12:32",
+      "end_time": "2026-07-20 13:12:32",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 13:12:32",
+          "equipment": "Valve-01",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0035",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-20 13:23:13",
+      "end_time": "2026-07-20 13:23:13",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 13:23:13",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0036",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-20 13:36:26",
+      "end_time": "2026-07-20 13:36:26",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Close"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 13:36:26",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0037",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-20 13:48:13",
+      "end_time": "2026-07-20 13:48:13",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 13:48:13",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0038",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-20 13:56:15",
+      "end_time": "2026-07-20 14:02:48",
+      "duration_seconds": 393,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Flow Low",
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 13:56:15",
+          "equipment": "Pump-02",
+          "alarm_type": "Flow Low",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 14:02:48",
+          "equipment": "Pump-02",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0039",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-20 14:02:21",
+      "end_time": "2026-07-20 14:02:21",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 14:02:21",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0040",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-20 14:03:40",
+      "end_time": "2026-07-20 14:03:40",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 14:03:40",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0041",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-20 14:08:45",
+      "end_time": "2026-07-20 14:21:25",
+      "duration_seconds": 760,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Communication Timeout"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 14:08:45",
+          "equipment": "PLC-01",
+          "alarm_type": "Communication Timeout",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-20 14:21:25",
+          "equipment": "PLC-01",
+          "alarm_type": "Communication Timeout",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0042",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-20 14:35:31",
+      "end_time": "2026-07-20 14:41:53",
+      "duration_seconds": 382,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Out of Range",
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 14:35:31",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 14:41:53",
+          "equipment": "Sensor-01",
+          "alarm_type": "Out of Range",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0043",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-20 14:54:39",
+      "end_time": "2026-07-20 14:54:39",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 14:54:39",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0044",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-20 15:08:38",
+      "end_time": "2026-07-20 15:30:52",
+      "duration_seconds": 1334,
+      "alarm_count": 3,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Flow Low",
+        "Pressure High",
+        "Pump Trip"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 15:08:38",
+          "equipment": "Pump-02",
+          "alarm_type": "Flow Low",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 15:15:56",
+          "equipment": "Pump-02",
+          "alarm_type": "Pump Trip",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-20 15:30:52",
+          "equipment": "Pump-02",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0045",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-20 15:11:21",
+      "end_time": "2026-07-20 15:11:21",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 15:11:21",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0046",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-20 15:40:25",
+      "end_time": "2026-07-20 15:40:25",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 15:40:25",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0047",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-20 15:55:14",
+      "end_time": "2026-07-20 16:03:46",
+      "duration_seconds": 512,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost",
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 15:55:14",
+          "equipment": "Valve-02",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 16:03:46",
+          "equipment": "Valve-02",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0048",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-20 16:06:54",
+      "end_time": "2026-07-20 16:06:54",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 16:06:54",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0049",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-20 16:11:45",
+      "end_time": "2026-07-20 16:24:33",
+      "duration_seconds": 768,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "CPU Load High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 16:11:45",
+          "equipment": "PLC-01",
+          "alarm_type": "CPU Load High",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 16:24:33",
+          "equipment": "PLC-01",
+          "alarm_type": "CPU Load High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0050",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-20 16:25:52",
+      "end_time": "2026-07-20 16:25:52",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 16:25:52",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0051",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-20 16:34:46",
+      "end_time": "2026-07-20 16:36:28",
+      "duration_seconds": 102,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 16:34:46",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 16:36:28",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0052",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-20 16:48:19",
+      "end_time": "2026-07-20 16:48:19",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 16:48:19",
+          "equipment": "Valve-02",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0053",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-20 16:58:31",
+      "end_time": "2026-07-20 16:58:31",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 16:58:31",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0054",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-20 17:08:48",
+      "end_time": "2026-07-20 17:21:21",
+      "duration_seconds": 753,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High",
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 17:08:48",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 17:21:21",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0055",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-20 17:23:55",
+      "end_time": "2026-07-20 17:23:55",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 17:23:55",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0056",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-20 17:37:04",
+      "end_time": "2026-07-20 17:47:00",
+      "duration_seconds": 596,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 17:37:04",
+          "equipment": "Pump-02",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 17:47:00",
+          "equipment": "Pump-02",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0057",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-20 17:55:58",
+      "end_time": "2026-07-20 18:05:16",
+      "duration_seconds": 558,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High",
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 17:55:58",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 18:05:16",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0058",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-20 17:57:28",
+      "end_time": "2026-07-20 17:57:28",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 17:57:28",
+          "equipment": "Valve-02",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0059",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-20 18:19:22",
+      "end_time": "2026-07-20 18:19:22",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Motor Overheat"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 18:19:22",
+          "equipment": "Pump-01",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0060",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-20 18:21:28",
+      "end_time": "2026-07-20 18:34:28",
+      "duration_seconds": 780,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost",
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 18:21:28",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 18:34:28",
+          "equipment": "Valve-01",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0061",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-20 18:38:23",
+      "end_time": "2026-07-20 18:38:23",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 18:38:23",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0062",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-20 18:53:16",
+      "end_time": "2026-07-20 18:53:16",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 18:53:16",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0063",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-20 19:08:02",
+      "end_time": "2026-07-20 19:08:02",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 19:08:02",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0064",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-20 19:22:31",
+      "end_time": "2026-07-20 19:33:43",
+      "duration_seconds": 672,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 19:22:31",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 19:33:43",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0065",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-20 19:43:27",
+      "end_time": "2026-07-20 19:43:27",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 19:43:27",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0066",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-20 19:55:34",
+      "end_time": "2026-07-20 20:05:50",
+      "duration_seconds": 616,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 19:55:34",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 20:05:50",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0067",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-20 20:12:23",
+      "end_time": "2026-07-20 20:12:23",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Motor Overheat"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 20:12:23",
+          "equipment": "Pump-01",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0068",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-20 20:16:58",
+      "end_time": "2026-07-20 20:16:58",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Motor Overheat"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 20:16:58",
+          "equipment": "Pump-02",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0069",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-20 20:24:14",
+      "end_time": "2026-07-20 20:38:13",
+      "duration_seconds": 839,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 20:24:14",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 20:38:13",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0070",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-20 20:51:54",
+      "end_time": "2026-07-20 20:51:54",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "info",
+      "alarm_types": [
+        "Calibration Required"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 20:51:54",
+          "equipment": "Sensor-01",
+          "alarm_type": "Calibration Required",
+          "severity": "info"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0071",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-20 21:06:04",
+      "end_time": "2026-07-20 21:06:04",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 21:06:04",
+          "equipment": "Valve-02",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0072",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-20 21:12:55",
+      "end_time": "2026-07-20 21:12:55",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Pump Trip"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 21:12:55",
+          "equipment": "Pump-01",
+          "alarm_type": "Pump Trip",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0073",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-20 21:27:11",
+      "end_time": "2026-07-20 21:27:11",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "CPU Load High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 21:27:11",
+          "equipment": "PLC-01",
+          "alarm_type": "CPU Load High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0074",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-20 21:41:05",
+      "end_time": "2026-07-20 21:41:05",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 21:41:05",
+          "equipment": "Valve-02",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0075",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-20 21:48:13",
+      "end_time": "2026-07-20 21:48:13",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 21:48:13",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0076",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-20 22:01:44",
+      "end_time": "2026-07-20 22:12:15",
+      "duration_seconds": 631,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 22:01:44",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 22:12:15",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0077",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-20 22:08:53",
+      "end_time": "2026-07-20 22:18:28",
+      "duration_seconds": 575,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 22:08:53",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 22:18:28",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0078",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-20 22:27:31",
+      "end_time": "2026-07-20 22:27:31",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Pump Trip"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 22:27:31",
+          "equipment": "Pump-02",
+          "alarm_type": "Pump Trip",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0079",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-20 22:31:05",
+      "end_time": "2026-07-20 22:31:05",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 22:31:05",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0080",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-20 22:31:26",
+      "end_time": "2026-07-20 22:31:26",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 22:31:26",
+          "equipment": "Valve-02",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0081",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-20 22:43:06",
+      "end_time": "2026-07-20 22:43:06",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level Low-Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 22:43:06",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low-Low",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0082",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-20 22:57:54",
+      "end_time": "2026-07-20 22:57:54",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Motor Overheat"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 22:57:54",
+          "equipment": "Pump-02",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0083",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-20 23:09:36",
+      "end_time": "2026-07-20 23:09:36",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Out of Range"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 23:09:36",
+          "equipment": "Sensor-01",
+          "alarm_type": "Out of Range",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0084",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-20 23:14:58",
+      "end_time": "2026-07-20 23:21:46",
+      "duration_seconds": 408,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Open",
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 23:14:58",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-20 23:21:46",
+          "equipment": "Valve-01",
+          "alarm_type": "Failed to Open",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0085",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-20 23:29:01",
+      "end_time": "2026-07-20 23:29:01",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Motor Overheat"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 23:29:01",
+          "equipment": "Pump-01",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0086",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-20 23:36:41",
+      "end_time": "2026-07-20 23:36:41",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 23:36:41",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260720-0087",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-20 23:48:32",
+      "end_time": "2026-07-20 23:48:32",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Close"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-20 23:48:32",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0088",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 00:02:27",
+      "end_time": "2026-07-21 00:02:27",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 00:02:27",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0089",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 00:04:22",
+      "end_time": "2026-07-21 00:18:27",
+      "duration_seconds": 845,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Close",
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 00:04:22",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-21 00:18:27",
+          "equipment": "Valve-02",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0090",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-21 00:26:53",
+      "end_time": "2026-07-21 00:26:53",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Pump Trip"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 00:26:53",
+          "equipment": "Pump-02",
+          "alarm_type": "Pump Trip",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0091",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 00:37:57",
+      "end_time": "2026-07-21 00:37:57",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Close"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 00:37:57",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0092",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 00:46:43",
+      "end_time": "2026-07-21 00:46:43",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 00:46:43",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0093",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-21 00:59:51",
+      "end_time": "2026-07-21 00:59:51",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Pump Trip"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 00:59:51",
+          "equipment": "Pump-02",
+          "alarm_type": "Pump Trip",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0094",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 01:13:54",
+      "end_time": "2026-07-21 01:13:54",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Communication Timeout"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 01:13:54",
+          "equipment": "PLC-01",
+          "alarm_type": "Communication Timeout",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0095",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-21 01:28:42",
+      "end_time": "2026-07-21 01:28:42",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Flow Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 01:28:42",
+          "equipment": "Pump-02",
+          "alarm_type": "Flow Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0096",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 01:40:25",
+      "end_time": "2026-07-21 01:40:25",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 01:40:25",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0097",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 01:53:01",
+      "end_time": "2026-07-21 01:53:01",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "info",
+      "alarm_types": [
+        "Calibration Required"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 01:53:01",
+          "equipment": "Sensor-01",
+          "alarm_type": "Calibration Required",
+          "severity": "info"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0098",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 01:56:03",
+      "end_time": "2026-07-21 01:56:03",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "CPU Load High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 01:56:03",
+          "equipment": "PLC-01",
+          "alarm_type": "CPU Load High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0099",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 02:00:36",
+      "end_time": "2026-07-21 02:09:20",
+      "duration_seconds": 524,
+      "alarm_count": 3,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High",
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 02:00:36",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-21 02:05:00",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-21 02:09:20",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0100",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-21 02:18:53",
+      "end_time": "2026-07-21 02:18:53",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Flow Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 02:18:53",
+          "equipment": "Pump-02",
+          "alarm_type": "Flow Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0101",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 02:31:03",
+      "end_time": "2026-07-21 02:31:03",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Open"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 02:31:03",
+          "equipment": "Valve-01",
+          "alarm_type": "Failed to Open",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0102",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 02:38:27",
+      "end_time": "2026-07-21 02:38:27",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Out of Range"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 02:38:27",
+          "equipment": "Sensor-01",
+          "alarm_type": "Out of Range",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0103",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-21 02:45:52",
+      "end_time": "2026-07-21 02:52:50",
+      "duration_seconds": 418,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Pressure Low",
+        "Pump Trip"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 02:45:52",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure Low",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-21 02:52:50",
+          "equipment": "Pump-01",
+          "alarm_type": "Pump Trip",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0104",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 02:59:10",
+      "end_time": "2026-07-21 02:59:10",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 02:59:10",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0105",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 03:13:45",
+      "end_time": "2026-07-21 03:13:45",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "info",
+      "alarm_types": [
+        "Calibration Required"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 03:13:45",
+          "equipment": "Sensor-01",
+          "alarm_type": "Calibration Required",
+          "severity": "info"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0106",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 03:23:24",
+      "end_time": "2026-07-21 03:23:24",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 03:23:24",
+          "equipment": "Valve-02",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0107",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 03:31:10",
+      "end_time": "2026-07-21 03:31:10",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Communication Timeout"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 03:31:10",
+          "equipment": "PLC-01",
+          "alarm_type": "Communication Timeout",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0108",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 03:42:54",
+      "end_time": "2026-07-21 03:42:54",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 03:42:54",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0109",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-21 03:45:24",
+      "end_time": "2026-07-21 03:57:02",
+      "duration_seconds": 698,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Pressure High",
+        "Pump Trip"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 03:45:24",
+          "equipment": "Pump-01",
+          "alarm_type": "Pump Trip",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-21 03:57:02",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0110",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 03:59:40",
+      "end_time": "2026-07-21 03:59:40",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Backup Battery Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 03:59:40",
+          "equipment": "PLC-01",
+          "alarm_type": "Backup Battery Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0111",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 04:05:35",
+      "end_time": "2026-07-21 04:05:35",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 04:05:35",
+          "equipment": "Valve-02",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0112",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 04:18:54",
+      "end_time": "2026-07-21 04:33:25",
+      "duration_seconds": 871,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Out of Range"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 04:18:54",
+          "equipment": "Sensor-01",
+          "alarm_type": "Out of Range",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-21 04:33:25",
+          "equipment": "Sensor-01",
+          "alarm_type": "Out of Range",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0113",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-21 04:41:46",
+      "end_time": "2026-07-21 04:41:46",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 04:41:46",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0114",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 04:48:04",
+      "end_time": "2026-07-21 04:48:04",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 04:48:04",
+          "equipment": "Valve-02",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0115",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-21 05:01:16",
+      "end_time": "2026-07-21 05:01:16",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 05:01:16",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0116",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 05:12:12",
+      "end_time": "2026-07-21 05:12:12",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 05:12:12",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0117",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 05:22:09",
+      "end_time": "2026-07-21 05:22:09",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 05:22:09",
+          "equipment": "Valve-02",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0118",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 05:35:34",
+      "end_time": "2026-07-21 05:35:34",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 05:35:34",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0119",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-21 05:48:39",
+      "end_time": "2026-07-21 05:48:39",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Flow Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 05:48:39",
+          "equipment": "Pump-02",
+          "alarm_type": "Flow Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0120",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-21 05:50:49",
+      "end_time": "2026-07-21 06:02:00",
+      "duration_seconds": 671,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Motor Overheat"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 05:50:49",
+          "equipment": "Pump-01",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-21 06:02:00",
+          "equipment": "Pump-01",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0121",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 05:57:33",
+      "end_time": "2026-07-21 05:57:33",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 05:57:33",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0122",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 05:59:37",
+      "end_time": "2026-07-21 05:59:37",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 05:59:37",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0123",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 06:13:37",
+      "end_time": "2026-07-21 06:13:37",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 06:13:37",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0124",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-21 06:19:46",
+      "end_time": "2026-07-21 06:19:46",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Pump Trip"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 06:19:46",
+          "equipment": "Pump-01",
+          "alarm_type": "Pump Trip",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0125",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 06:21:54",
+      "end_time": "2026-07-21 06:21:54",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Out of Range"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 06:21:54",
+          "equipment": "Sensor-01",
+          "alarm_type": "Out of Range",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0126",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 06:36:22",
+      "end_time": "2026-07-21 06:36:22",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "CPU Load High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 06:36:22",
+          "equipment": "PLC-01",
+          "alarm_type": "CPU Load High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0127",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 06:49:13",
+      "end_time": "2026-07-21 06:49:13",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 06:49:13",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0128",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 06:58:44",
+      "end_time": "2026-07-21 06:58:44",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "CPU Load High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 06:58:44",
+          "equipment": "PLC-01",
+          "alarm_type": "CPU Load High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0129",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 07:11:32",
+      "end_time": "2026-07-21 07:11:32",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 07:11:32",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0130",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-21 07:26:02",
+      "end_time": "2026-07-21 07:26:02",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Motor Overheat"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 07:26:02",
+          "equipment": "Pump-02",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0131",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 07:30:31",
+      "end_time": "2026-07-21 07:30:31",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Backup Battery Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 07:30:31",
+          "equipment": "PLC-01",
+          "alarm_type": "Backup Battery Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0132",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 07:37:19",
+      "end_time": "2026-07-21 07:37:19",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 07:37:19",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0133",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 07:43:11",
+      "end_time": "2026-07-21 07:43:11",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 07:43:11",
+          "equipment": "Valve-01",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0134",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 07:57:07",
+      "end_time": "2026-07-21 08:07:37",
+      "duration_seconds": 630,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High",
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 07:57:07",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-21 08:07:37",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0135",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 08:09:24",
+      "end_time": "2026-07-21 08:19:12",
+      "duration_seconds": 588,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Close"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 08:09:24",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-21 08:19:12",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0136",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 08:31:40",
+      "end_time": "2026-07-21 08:31:40",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "CPU Load High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 08:31:40",
+          "equipment": "PLC-01",
+          "alarm_type": "CPU Load High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0137",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 08:33:35",
+      "end_time": "2026-07-21 08:38:04",
+      "duration_seconds": 269,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High",
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 08:33:35",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-21 08:38:04",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0138",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 08:46:28",
+      "end_time": "2026-07-21 08:56:11",
+      "duration_seconds": 583,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 08:46:28",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-21 08:56:11",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0139",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 09:01:08",
+      "end_time": "2026-07-21 09:01:08",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 09:01:08",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0140",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 09:13:46",
+      "end_time": "2026-07-21 09:17:22",
+      "duration_seconds": 216,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Close",
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 09:13:46",
+          "equipment": "Valve-02",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-21 09:17:22",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0141",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 09:30:03",
+      "end_time": "2026-07-21 09:30:03",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 09:30:03",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0142",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 09:35:26",
+      "end_time": "2026-07-21 09:35:26",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 09:35:26",
+          "equipment": "Valve-02",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0143",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 09:47:51",
+      "end_time": "2026-07-21 09:47:51",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 09:47:51",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0144",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 09:57:37",
+      "end_time": "2026-07-21 09:57:37",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 09:57:37",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0145",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 10:08:50",
+      "end_time": "2026-07-21 10:08:50",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Communication Timeout"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 10:08:50",
+          "equipment": "PLC-01",
+          "alarm_type": "Communication Timeout",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0146",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 10:18:57",
+      "end_time": "2026-07-21 10:18:57",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 10:18:57",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0147",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 10:25:05",
+      "end_time": "2026-07-21 10:25:05",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 10:25:05",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0148",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-21 10:33:34",
+      "end_time": "2026-07-21 10:33:34",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 10:33:34",
+          "equipment": "Pump-02",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0149",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-21 10:35:09",
+      "end_time": "2026-07-21 10:35:09",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 10:35:09",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0150",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 10:36:56",
+      "end_time": "2026-07-21 10:44:22",
+      "duration_seconds": 446,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Close",
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 10:36:56",
+          "equipment": "Valve-02",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-21 10:44:22",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0151",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 10:52:15",
+      "end_time": "2026-07-21 10:52:15",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 10:52:15",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0152",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-21 10:57:47",
+      "end_time": "2026-07-21 11:07:39",
+      "duration_seconds": 592,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Pressure High",
+        "Pump Trip"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 10:57:47",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-21 11:07:39",
+          "equipment": "Pump-01",
+          "alarm_type": "Pump Trip",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0153",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 11:01:39",
+      "end_time": "2026-07-21 11:04:39",
+      "duration_seconds": 180,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost",
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 11:01:39",
+          "equipment": "Valve-02",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-21 11:04:39",
+          "equipment": "Valve-02",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0154",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 11:18:07",
+      "end_time": "2026-07-21 11:18:07",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Backup Battery Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 11:18:07",
+          "equipment": "PLC-01",
+          "alarm_type": "Backup Battery Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0155",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 11:30:30",
+      "end_time": "2026-07-21 11:30:30",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 11:30:30",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0156",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 11:32:02",
+      "end_time": "2026-07-21 11:43:02",
+      "duration_seconds": 660,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost",
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 11:32:02",
+          "equipment": "Valve-02",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-21 11:43:02",
+          "equipment": "Valve-02",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0157",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 11:54:25",
+      "end_time": "2026-07-21 11:54:25",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 11:54:25",
+          "equipment": "Valve-01",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0158",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-21 11:55:58",
+      "end_time": "2026-07-21 11:55:58",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 11:55:58",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0159",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 12:06:27",
+      "end_time": "2026-07-21 12:06:27",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 12:06:27",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0160",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 12:18:43",
+      "end_time": "2026-07-21 12:18:43",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Out of Range"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 12:18:43",
+          "equipment": "Sensor-01",
+          "alarm_type": "Out of Range",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0161",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 12:27:28",
+      "end_time": "2026-07-21 12:27:28",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Communication Timeout"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 12:27:28",
+          "equipment": "PLC-01",
+          "alarm_type": "Communication Timeout",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0162",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 12:35:10",
+      "end_time": "2026-07-21 12:35:10",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level Low-Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 12:35:10",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low-Low",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0163",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 12:37:03",
+      "end_time": "2026-07-21 12:37:03",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Close"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 12:37:03",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0164",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-21 12:47:12",
+      "end_time": "2026-07-21 12:47:12",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Motor Overheat"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 12:47:12",
+          "equipment": "Pump-01",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0165",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 13:00:33",
+      "end_time": "2026-07-21 13:00:33",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 13:00:33",
+          "equipment": "Valve-01",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0166",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 13:08:25",
+      "end_time": "2026-07-21 13:08:25",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 13:08:25",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0167",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 13:16:11",
+      "end_time": "2026-07-21 13:16:11",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Communication Timeout"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 13:16:11",
+          "equipment": "PLC-01",
+          "alarm_type": "Communication Timeout",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0168",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 13:23:29",
+      "end_time": "2026-07-21 13:23:29",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 13:23:29",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0169",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 13:38:27",
+      "end_time": "2026-07-21 13:38:27",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 13:38:27",
+          "equipment": "Valve-01",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0170",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 13:47:14",
+      "end_time": "2026-07-21 13:47:14",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 13:47:14",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0171",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-21 14:01:27",
+      "end_time": "2026-07-21 14:01:27",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 14:01:27",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0172",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-21 14:07:18",
+      "end_time": "2026-07-21 14:07:18",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Pump Trip"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 14:07:18",
+          "equipment": "Pump-02",
+          "alarm_type": "Pump Trip",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0173",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-21 14:21:42",
+      "end_time": "2026-07-21 14:21:42",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Pump Trip"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 14:21:42",
+          "equipment": "Pump-01",
+          "alarm_type": "Pump Trip",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0174",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 14:25:14",
+      "end_time": "2026-07-21 14:25:14",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level Low-Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 14:25:14",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low-Low",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0175",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 14:36:14",
+      "end_time": "2026-07-21 14:36:14",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Communication Timeout"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 14:36:14",
+          "equipment": "PLC-01",
+          "alarm_type": "Communication Timeout",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0176",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 14:45:56",
+      "end_time": "2026-07-21 14:45:56",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 14:45:56",
+          "equipment": "Valve-01",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0177",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 14:58:11",
+      "end_time": "2026-07-21 14:58:11",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "CPU Load High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 14:58:11",
+          "equipment": "PLC-01",
+          "alarm_type": "CPU Load High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0178",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 15:10:37",
+      "end_time": "2026-07-21 15:10:37",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 15:10:37",
+          "equipment": "Valve-01",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0179",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 15:20:22",
+      "end_time": "2026-07-21 15:20:22",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 15:20:22",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0180",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-21 15:35:03",
+      "end_time": "2026-07-21 15:35:03",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Pump Trip"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 15:35:03",
+          "equipment": "Pump-02",
+          "alarm_type": "Pump Trip",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0181",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 15:46:26",
+      "end_time": "2026-07-21 15:46:26",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 15:46:26",
+          "equipment": "Valve-01",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0182",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 15:51:44",
+      "end_time": "2026-07-21 15:51:44",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 15:51:44",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0183",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 16:00:07",
+      "end_time": "2026-07-21 16:06:59",
+      "duration_seconds": 412,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost",
+        "Failed to Close"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 16:00:07",
+          "equipment": "Valve-02",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-21 16:06:59",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0184",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-21 16:09:38",
+      "end_time": "2026-07-21 16:09:38",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Motor Overheat"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 16:09:38",
+          "equipment": "Pump-02",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0185",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 16:24:32",
+      "end_time": "2026-07-21 16:24:32",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Out of Range"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 16:24:32",
+          "equipment": "Sensor-01",
+          "alarm_type": "Out of Range",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0186",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 16:33:31",
+      "end_time": "2026-07-21 16:33:31",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 16:33:31",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0187",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 16:38:56",
+      "end_time": "2026-07-21 16:38:56",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Communication Timeout"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 16:38:56",
+          "equipment": "PLC-01",
+          "alarm_type": "Communication Timeout",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0188",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 16:47:31",
+      "end_time": "2026-07-21 16:47:31",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 16:47:31",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0189",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 16:57:07",
+      "end_time": "2026-07-21 16:57:07",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Out of Range"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 16:57:07",
+          "equipment": "Sensor-01",
+          "alarm_type": "Out of Range",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0190",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 17:00:40",
+      "end_time": "2026-07-21 17:00:40",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Close"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 17:00:40",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0191",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 17:15:36",
+      "end_time": "2026-07-21 17:24:00",
+      "duration_seconds": 504,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Out of Range",
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 17:15:36",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-21 17:24:00",
+          "equipment": "Sensor-01",
+          "alarm_type": "Out of Range",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0192",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 17:37:51",
+      "end_time": "2026-07-21 17:37:51",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 17:37:51",
+          "equipment": "Valve-01",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0193",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 17:40:20",
+      "end_time": "2026-07-21 17:40:20",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 17:40:20",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0194",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-21 17:48:10",
+      "end_time": "2026-07-21 17:48:10",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 17:48:10",
+          "equipment": "Pump-02",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0195",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 17:55:29",
+      "end_time": "2026-07-21 17:55:29",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 17:55:29",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0196",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 18:00:20",
+      "end_time": "2026-07-21 18:00:20",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level Low-Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 18:00:20",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low-Low",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0197",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-21 18:11:45",
+      "end_time": "2026-07-21 18:11:45",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Motor Overheat"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 18:11:45",
+          "equipment": "Pump-02",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0198",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 18:26:44",
+      "end_time": "2026-07-21 18:26:44",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Out of Range"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 18:26:44",
+          "equipment": "Sensor-01",
+          "alarm_type": "Out of Range",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0199",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 18:40:01",
+      "end_time": "2026-07-21 18:40:01",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "CPU Load High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 18:40:01",
+          "equipment": "PLC-01",
+          "alarm_type": "CPU Load High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0200",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 18:44:21",
+      "end_time": "2026-07-21 18:44:21",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 18:44:21",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0201",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-21 18:52:05",
+      "end_time": "2026-07-21 18:52:05",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 18:52:05",
+          "equipment": "Pump-02",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0202",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 19:04:15",
+      "end_time": "2026-07-21 19:04:15",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 19:04:15",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0203",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 19:09:35",
+      "end_time": "2026-07-21 19:09:35",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 19:09:35",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0204",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 19:14:05",
+      "end_time": "2026-07-21 19:14:05",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "info",
+      "alarm_types": [
+        "Calibration Required"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 19:14:05",
+          "equipment": "Sensor-01",
+          "alarm_type": "Calibration Required",
+          "severity": "info"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0205",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 19:17:29",
+      "end_time": "2026-07-21 19:17:29",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 19:17:29",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0206",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 19:28:23",
+      "end_time": "2026-07-21 19:31:09",
+      "duration_seconds": 166,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 19:28:23",
+          "equipment": "Valve-02",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-21 19:31:09",
+          "equipment": "Valve-02",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0207",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 19:39:19",
+      "end_time": "2026-07-21 20:02:52",
+      "duration_seconds": 1413,
+      "alarm_count": 3,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High",
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 19:39:19",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-21 19:50:46",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        },
+        {
+          "timestamp": "2026-07-21 20:02:52",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0208",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 19:44:33",
+      "end_time": "2026-07-21 19:44:33",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 19:44:33",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0209",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 20:06:35",
+      "end_time": "2026-07-21 20:06:35",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 20:06:35",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0210",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 20:16:40",
+      "end_time": "2026-07-21 20:16:40",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level Low-Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 20:16:40",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low-Low",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0211",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 20:28:56",
+      "end_time": "2026-07-21 20:28:56",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 20:28:56",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0212",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 20:40:30",
+      "end_time": "2026-07-21 20:40:30",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 20:40:30",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0213",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 20:51:10",
+      "end_time": "2026-07-21 20:51:10",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "CPU Load High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 20:51:10",
+          "equipment": "PLC-01",
+          "alarm_type": "CPU Load High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0214",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 20:55:25",
+      "end_time": "2026-07-21 20:55:25",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 20:55:25",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0215",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 21:06:20",
+      "end_time": "2026-07-21 21:06:20",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 21:06:20",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0216",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 21:19:45",
+      "end_time": "2026-07-21 21:19:45",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 21:19:45",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0217",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 21:25:21",
+      "end_time": "2026-07-21 21:25:21",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Communication Timeout"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 21:25:21",
+          "equipment": "PLC-01",
+          "alarm_type": "Communication Timeout",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0218",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 21:38:10",
+      "end_time": "2026-07-21 21:38:10",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 21:38:10",
+          "equipment": "Valve-01",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0219",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 21:44:04",
+      "end_time": "2026-07-21 21:44:04",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 21:44:04",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0220",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 21:57:49",
+      "end_time": "2026-07-21 21:57:49",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level Low-Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 21:57:49",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low-Low",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0221",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-21 22:02:48",
+      "end_time": "2026-07-21 22:02:48",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Connection Lost"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 22:02:48",
+          "equipment": "Valve-01",
+          "alarm_type": "Connection Lost",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0222",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 22:11:21",
+      "end_time": "2026-07-21 22:11:21",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 22:11:21",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0223",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-21 22:25:24",
+      "end_time": "2026-07-21 22:25:24",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Pump Trip"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 22:25:24",
+          "equipment": "Pump-02",
+          "alarm_type": "Pump Trip",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0224",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-21 22:28:08",
+      "end_time": "2026-07-21 22:28:08",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Close"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 22:28:08",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0225",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 22:35:14",
+      "end_time": "2026-07-21 22:35:14",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 22:35:14",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0226",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-21 22:35:48",
+      "end_time": "2026-07-21 22:47:36",
+      "duration_seconds": 708,
+      "alarm_count": 2,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level High-High",
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 22:35:48",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-21 22:47:36",
+          "equipment": "Tank-01",
+          "alarm_type": "Level High-High",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0227",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-21 22:58:49",
+      "end_time": "2026-07-21 22:58:49",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 22:58:49",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0228",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-21 23:07:11",
+      "end_time": "2026-07-21 23:07:11",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Motor Overheat"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 23:07:11",
+          "equipment": "Pump-01",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0229",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-21 23:11:17",
+      "end_time": "2026-07-21 23:11:17",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Pump Trip"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 23:11:17",
+          "equipment": "Pump-02",
+          "alarm_type": "Pump Trip",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0230",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 23:16:46",
+      "end_time": "2026-07-21 23:16:46",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 23:16:46",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0231",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-21 23:22:17",
+      "end_time": "2026-07-21 23:29:14",
+      "duration_seconds": 417,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "CPU Load High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 23:22:17",
+          "equipment": "PLC-01",
+          "alarm_type": "CPU Load High",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-21 23:29:14",
+          "equipment": "PLC-01",
+          "alarm_type": "CPU Load High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260721-0232",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-21 23:42:14",
+      "end_time": "2026-07-21 23:56:02",
+      "duration_seconds": 828,
+      "alarm_count": 3,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Calibration Required",
+        "Signal Unstable"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-21 23:42:14",
+          "equipment": "Sensor-01",
+          "alarm_type": "Calibration Required",
+          "severity": "info"
+        },
+        {
+          "timestamp": "2026-07-21 23:45:12",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-21 23:56:02",
+          "equipment": "Sensor-01",
+          "alarm_type": "Signal Unstable",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0233",
+      "equipment": "PLC-01",
+      "start_time": "2026-07-22 00:00:04",
+      "end_time": "2026-07-22 00:00:04",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "CPU Load High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 00:00:04",
+          "equipment": "PLC-01",
+          "alarm_type": "CPU Load High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0234",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-22 00:14:59",
+      "end_time": "2026-07-22 00:21:35",
+      "duration_seconds": 396,
+      "alarm_count": 2,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 00:14:59",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        },
+        {
+          "timestamp": "2026-07-22 00:21:35",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0235",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-22 00:25:09",
+      "end_time": "2026-07-22 00:25:09",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 00:25:09",
+          "equipment": "Pump-02",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0236",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-22 00:36:26",
+      "end_time": "2026-07-22 00:36:26",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 00:36:26",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0237",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-22 00:40:55",
+      "end_time": "2026-07-22 00:40:55",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Open"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 00:40:55",
+          "equipment": "Valve-01",
+          "alarm_type": "Failed to Open",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0238",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-22 00:55:24",
+      "end_time": "2026-07-22 00:55:24",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Close"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 00:55:24",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0239",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-22 00:59:42",
+      "end_time": "2026-07-22 00:59:42",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 00:59:42",
+          "equipment": "Tank-02",
+          "alarm_type": "Level High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0240",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-22 01:10:12",
+      "end_time": "2026-07-22 01:10:12",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Motor Overheat"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 01:10:12",
+          "equipment": "Pump-01",
+          "alarm_type": "Motor Overheat",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0241",
+      "equipment": "Valve-01",
+      "start_time": "2026-07-22 01:13:00",
+      "end_time": "2026-07-22 01:13:00",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Open"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 01:13:00",
+          "equipment": "Valve-01",
+          "alarm_type": "Failed to Open",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0242",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-22 01:16:18",
+      "end_time": "2026-07-22 01:16:18",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Flow Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 01:16:18",
+          "equipment": "Pump-02",
+          "alarm_type": "Flow Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0243",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-22 01:30:06",
+      "end_time": "2026-07-22 01:30:06",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Failed to Close"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 01:30:06",
+          "equipment": "Valve-02",
+          "alarm_type": "Failed to Close",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0244",
+      "equipment": "Tank-01",
+      "start_time": "2026-07-22 01:33:24",
+      "end_time": "2026-07-22 01:33:24",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Level Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 01:33:24",
+          "equipment": "Tank-01",
+          "alarm_type": "Level Low",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0245",
+      "equipment": "Pump-02",
+      "start_time": "2026-07-22 01:42:42",
+      "end_time": "2026-07-22 01:42:42",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 01:42:42",
+          "equipment": "Pump-02",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0246",
+      "equipment": "Tank-02",
+      "start_time": "2026-07-22 01:56:18",
+      "end_time": "2026-07-22 01:56:18",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Level Low-Low"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 01:56:18",
+          "equipment": "Tank-02",
+          "alarm_type": "Level Low-Low",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0247",
+      "equipment": "Valve-02",
+      "start_time": "2026-07-22 02:04:20",
+      "end_time": "2026-07-22 02:04:20",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Position Error"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 02:04:20",
+          "equipment": "Valve-02",
+          "alarm_type": "Position Error",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0248",
+      "equipment": "Pump-01",
+      "start_time": "2026-07-22 02:12:29",
+      "end_time": "2026-07-22 02:12:29",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "warning",
+      "alarm_types": [
+        "Pressure High"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 02:12:29",
+          "equipment": "Pump-01",
+          "alarm_type": "Pressure High",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-20260722-0249",
+      "equipment": "Sensor-01",
+      "start_time": "2026-07-22 02:27:16",
+      "end_time": "2026-07-22 02:27:16",
+      "duration_seconds": 0,
+      "alarm_count": 1,
+      "highest_severity": "critical",
+      "alarm_types": [
+        "Out of Range"
+      ],
+      "alarms": [
+        {
+          "timestamp": "2026-07-22 02:27:16",
+          "equipment": "Sensor-01",
+          "alarm_type": "Out of Range",
+          "severity": "critical"
+        }
+      ]
+    }
+  ],
+  "validation_issues": []
+}
